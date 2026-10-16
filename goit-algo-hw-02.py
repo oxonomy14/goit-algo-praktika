@@ -2,7 +2,6 @@ from queue import Queue
 import random
 import time
 
-
 request_queue = Queue()
 
 

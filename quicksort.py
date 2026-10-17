@@ -7,5 +7,9 @@ def quicksort(arr):
     right = [x for x in arr if x > pivot]
     return quicksort(left) + middle + quicksort(right)
 
-print(quicksort([5, 3, 8, 4, 2]))
-# Виведе: [2, 3, 4, 5, 8]
+
+if __name__ == "__main__":
+    numbers = [5, 3, 8, 4, 2]
+    print("Original list:", numbers)
+    sorted_numbers = quicksort(numbers)
+    print("Sorted list:", sorted_numbers)

@@ -8,6 +8,7 @@ def merge_sort(arr):
 
     return merge(merge_sort(left_half), merge_sort(right_half))
 
+
 def merge(left, right):
     merged = []
     left_index = 0
@@ -22,8 +23,8 @@ def merge(left, right):
             merged.append(right[right_index])
             right_index += 1
 
-    # Якщо в лівій або правій половині залишилися елементи, 
-		# додайте їх до результату
+    # Якщо в лівій або правій половині залишилися елементи,
+    # додайте їх до результату
     while left_index < len(left):
         merged.append(left[left_index])
         left_index += 1
@@ -33,3 +34,10 @@ def merge(left, right):
         right_index += 1
 
     return merged
+
+
+if __name__ == "__main__":
+    numbers = [5, 3, 8, 4, 2]
+    print("Original list:", numbers)
+    sorted_numbers = merge_sort(numbers)
+    print("Sorted list:", sorted_numbers)

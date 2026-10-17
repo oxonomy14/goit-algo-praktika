@@ -7,6 +7,8 @@ def bubble_sort(lst):
     return lst
 
 
-numbers = [5, 3, 8, 4, 2]
-bubble_sort(numbers)
-print(numbers)  # Output: [2, 3, 4, 5, 8]
+if __name__ == "__main__":
+    numbers = [5, 3, 8, 4, 2]
+    print("Original list:", numbers)
+    sorted_numbers = bubble_sort(numbers)
+    print("Sorted list:", sorted_numbers)

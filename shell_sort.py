@@ -1,7 +1,7 @@
 def shell_sort(arr):
     n = len(arr)
     gap = n // 2
-    
+
     while gap > 0:
         for i in range(gap, n):
             temp = arr[i]
@@ -14,5 +14,9 @@ def shell_sort(arr):
 
     return arr
 
-numbers = [5, 3, 8, 4, 2]
-shell_sort(numbers)
+
+if __name__ == "__main__":
+    numbers = [5, 3, 8, 4, 2]
+    print("Original list:", numbers)
+    sorted_numbers = shell_sort(numbers)
+    print("Sorted list:", sorted_numbers)

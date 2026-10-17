@@ -23,6 +23,7 @@ def counting_sort(arr, position):
     for i in range(0, size):
         arr[i] = output[i]
 
+
 def radix_sort(arr):
     # Визначення максимального числа для визначення кількості розрядів
     max_num = max(arr)
@@ -32,6 +33,9 @@ def radix_sort(arr):
         counting_sort(arr, position)
         position *= 10
 
-arr = [3, 89, 67, 254, 9, 21, 185, 4, 62]
-radix_sort(arr)
-print("Відсортований масив:", arr)  # Відсортований масив: [3, 4, 9, 21, 62, 67, 89, 185, 254]
+
+if __name__ == "__main__":
+    numbers = [3, 89, 67, 254, 9, 21, 185, 4, 62]
+    print("Original list:", numbers)
+    radix_sort(numbers)
+    print("Sorted list:", numbers)
